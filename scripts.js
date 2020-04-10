@@ -375,8 +375,13 @@ uniqueMaterials.sort();
 (function ($) {
 
   uniqueMaterials.forEach(function (material) {
+    // Add materials for autocomplete.
     var option = '<option value="' + material + '">' + material + '</option>';
     $('#materials').append(option);
+
+    // Add materials for select mode.
+    var materialSelectItem = '<div class="input-group col-md-4" data-material="' + material + '"><div class="input-group-prepend"><span class="input-group-text btn btn-select">+</span></div><div class="form-control">' + getMaterialImageOrLabel(material, true) + '</div></div>';
+    $('.materials-select-list').append(materialSelectItem);
   });
 
   var selectEl = document.querySelector('#materials');
@@ -516,12 +521,14 @@ uniqueMaterials.sort();
   }
 
   $(document).ready(function () {
-    $('body').on('click', '.btn-add', addMaterial);
-    $('body').on('click', '.materials-list .btn-close', deleteMaterial);
-    $('body').on('click', '.btn-calculate', calculate);
+    var $body = $('body');
+
+    $body.on('click', '.btn-add', addMaterial);
+    $body.on('click', '.materials-list .btn-close', deleteMaterial);
+    $body.on('click', '.btn-calculate', calculate);
 
     // On enter press, don't submit form but instead add material.
-    $('body').on('keypress', '#materials', function (e) {
+    $body.on('keypress', '#materials', function (e) {
       if (e.keyCode != 13) {
         return;
       }
@@ -529,6 +536,18 @@ uniqueMaterials.sort();
       e.preventDefault();
       addMaterial();
       calculate();
+    });
+
+    // Toggle mode from autocomplete to select.
+    $body.on('click', '.btn-toggle-mode-select', function (e) {
+      $('.mode-autocomplete-wrapper').hide();
+      $('.mode-select-wrapper').show();
+    });
+
+    // Toggle mode from select to autocomplete.
+    $body.on('click', '.btn-toggle-mode-autocomplete', function (e) {
+      $('.mode-autocomplete-wrapper').show();
+      $('.mode-select-wrapper').hide();
     });
   });
 

@@ -21,7 +21,8 @@ body {
   max-height: 2rem;
 }
 
-.materials-list .form-control span {
+.materials-list .form-control span,
+.materials-select-list .form-control span {
   font-size: .8rem;
 }
 
