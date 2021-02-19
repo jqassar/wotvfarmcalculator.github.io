@@ -1,0 +1,738 @@
+{
+  "\"Grace\"": {
+    "element": "Light",
+    "jobs": [
+      "White Mage",
+      "Green Mage",
+      "Lancer"
+    ]
+  },
+  "\"Murmur\"": {
+    "element": "Earth",
+    "jobs": [
+      "Red Mage",
+      "Black Mage",
+      "Lancer"
+    ]
+  },
+  "\"Whisper\"": {
+    "element": "Dark",
+    "jobs": [
+      "Knight",
+      "Samurai",
+      "Spellblade"
+    ]
+  },
+  "Adelard": {
+    "element": "Fire",
+    "jobs": [
+      "Red Mage",
+      "Green Mage",
+      "White Mage"
+    ]
+  },
+  "Agrias": {
+    "element": "Ice",
+    "jobs": [
+      "Holy Knight",
+      "Paladin",
+      "Cleric"
+    ]
+  },
+  "Aileen": {
+    "element": "Earth",
+    "jobs": [
+      "Lancer",
+      "Warrior",
+      "Soldier"
+    ]
+  },
+  "Ayaka": {
+    "element": "Wind",
+    "jobs": [
+      "White Mage",
+      "Time Mage",
+      "Green Mage"
+    ]
+  },
+  "Baelo": {
+    "element": "Earth",
+    "jobs": [
+      "Knight",
+      "Warrior",
+      "Paladin"
+    ]
+  },
+  "Cadia": {
+    "element": "Wind",
+    "jobs": [
+      "Cleric",
+      "White Mage",
+      "Spellblade"
+    ]
+  },
+  "Cecil": {
+    "element": "Light",
+    "jobs": [
+      "Lunar Paladin",
+      "Soldier",
+      "Monk"
+    ]
+  },
+  "Chel": {
+    "element": "Ice",
+    "jobs": [
+      "Green Mage",
+      "Time Mage",
+      "Thief"
+    ]
+  },
+  "Dario Hourne": {
+    "element": "Wind",
+    "jobs": [
+      "Spellblade",
+      "Ninja",
+      "Paladin"
+    ]
+  },
+  "Delita": {
+    "element": "Fire",
+    "jobs": [
+      "Squire",
+      "Soldier",
+      "Paladin"
+    ]
+  },
+  "Dorando": {
+    "element": "Earth",
+    "jobs": [
+      "Viking",
+      "Monk",
+      "Gunner"
+    ]
+  },
+  "Duane": {
+    "element": "Dark",
+    "jobs": [
+      "Dark Knight of Remorse",
+      "Viking",
+      "Dragoon"
+    ]
+  },
+  "Engelbert": {
+    "element": "Light",
+    "jobs": [
+      "Paladin",
+      "Knight",
+      "Monk"
+    ]
+  },
+  "Etre": {
+    "element": "Earth",
+    "jobs": [
+      "Monk",
+      "Cleric",
+      "Knight"
+    ]
+  },
+  "Fina": {
+    "element": "Light",
+    "jobs": [
+      "White Mage of Lapis",
+      "Gunner",
+      "Cleric"
+    ]
+  },
+  "Frederika": {
+    "element": "Lightning",
+    "jobs": [
+      "Gunner",
+      "Ninja",
+      "Ranger"
+    ]
+  },
+  "Fryevia": {
+    "element": "Ice",
+    "jobs": [
+      "Spellblade",
+      "Green Mage",
+      "White Mage"
+    ]
+  },
+  "Gaffgarion": {
+    "element": "Dark",
+    "jobs": [
+      "Fell Knight",
+      "Warrior",
+      "Monk"
+    ]
+  },
+  "Gilgamesh": {
+    "element": "Ice",
+    "jobs": [
+      "Winged One",
+      "Time Mage",
+      "Soldier"
+    ]
+  },
+  "Glaciela Wezette": {
+    "element": "Water",
+    "jobs": [
+      "Valkyrie",
+      "Monk",
+      "Ninja"
+    ]
+  },
+  "Helena Leonis": {
+    "element": "Wind",
+    "jobs": [
+      "Green Mage",
+      "Time Mage",
+      "White Mage"
+    ]
+  },
+  "Howlet": {
+    "element": "Wind",
+    "jobs": [
+      "Rune Knight",
+      "Red Mage",
+      "White Mage"
+    ]
+  },
+  "Ildyra": {
+    "element": "Water",
+    "jobs": [
+      "Arithmetician",
+      "Spellblade",
+      "Black Mage"
+    ]
+  },
+  "Kain": {
+    "element": "Dark",
+    "jobs": [
+      "Dragoon of Baron",
+      "Viking",
+      "Paladin"
+    ]
+  },
+  "Khury Wezette": {
+    "element": "Ice",
+    "jobs": [
+      "Ranger",
+      "Dragoon",
+      "Green Mage"
+    ]
+  },
+  "Kilphe": {
+    "element": "Earth",
+    "jobs": [
+      "Staff Mage",
+      "Spellblade",
+      "White Mage"
+    ]
+  },
+  "Kitone": {
+    "element": "Earth",
+    "jobs": [
+      "Ninja",
+      "Soldier",
+      "Time Mage"
+    ]
+  },
+  "Lasswell": {
+    "element": "Ice",
+    "jobs": [
+      "Knight of Grandshelt (Ice)",
+      "Samurai",
+      "Dragoon"
+    ]
+  },
+  "Learte": {
+    "element": "Lightning",
+    "jobs": [
+      "Ranger",
+      "Lancer",
+      "White Mage"
+    ]
+  },
+  "Lilyth": {
+    "element": "Fire",
+    "jobs": [
+      "Knight",
+      "Soldier",
+      "Ranger"
+    ]
+  },
+  "Little Leela": {
+    "element": "Dark",
+    "jobs": [
+      "Spellblade",
+      "Knight",
+      "White Mage"
+    ]
+  },
+  "Little Leela (Halloween)": {
+    "element": "Wind",
+    "jobs": [
+      "Arithmetician",
+      "White Mage",
+      "Ninja"
+    ]
+  },
+  "Loreila": {
+    "element": "Wind",
+    "jobs": [
+      "Ranger",
+      "Viking",
+      "Knight"
+    ]
+  },
+  "Lorenzo": {
+    "element": "Earth",
+    "jobs": [
+      "Dragoon",
+      "Lancer",
+      "Time Mage"
+    ]
+  },
+  "Lu'Cia": {
+    "element": "Wind",
+    "jobs": [
+      "Dual Gunner",
+      "Ranger",
+      "Monk"
+    ]
+  },
+  "Luartha": {
+    "element": "Fire",
+    "jobs": [
+      "Dual Gunner",
+      "Gunner",
+      "Soldier"
+    ]
+  },
+  "Machérie (Winter)": {
+    "element": "Fire",
+    "jobs": [
+      "Dragoon",
+      "Viking",
+      "Ranger"
+    ]
+  },
+  "Machérie Hourne": {
+    "element": "Light",
+    "jobs": [
+      "Cleric",
+      "Monk",
+      "Black Mage"
+    ]
+  },
+  "Margritte": {
+    "element": "Fire",
+    "jobs": [
+      "Time Mage",
+      "Black Mage",
+      "Red Mage"
+    ]
+  },
+  "Mariale": {
+    "element": "Light",
+    "jobs": [
+      "Spellblade",
+      "Arithmetician",
+      "Thief"
+    ]
+  },
+  "Mediena": {
+    "element": "Ice",
+    "jobs": [
+      "Black Mage",
+      "Green Mage",
+      "Ninja"
+    ]
+  },
+  "Meriluke": {
+    "element": "Lightning",
+    "jobs": [
+      "Monk",
+      "Knight",
+      "Green Mage"
+    ]
+  },
+  "Mia": {
+    "element": "Wind",
+    "jobs": [
+      "Thief",
+      "Cleric",
+      "Spellblade"
+    ]
+  },
+  "Miche": {
+    "element": "Fire",
+    "jobs": [
+      "Black Mage",
+      "Thief",
+      "Ranger"
+    ]
+  },
+  "Miranda": {
+    "element": "Water",
+    "jobs": [
+      "Red Mage",
+      "Time Mage",
+      "Paladin"
+    ]
+  },
+  "Mont Leonis": {
+    "element": "Earth",
+    "jobs": [
+      "Lord",
+      "Paladin",
+      "Knight"
+    ]
+  },
+  "Muraga Fennes": {
+    "element": "None",
+    "jobs": [
+      "Viking",
+      "Ranger",
+      "Knight"
+    ]
+  },
+  "Mustadio": {
+    "element": "Earth",
+    "jobs": [
+      "Machinist",
+      "Ranger",
+      "Thief"
+    ]
+  },
+  "Naiah": {
+    "element": "Fire",
+    "jobs": [
+      "White Mage",
+      "Cleric",
+      "Red Mage"
+    ]
+  },
+  "Nasha": {
+    "element": "Ice",
+    "jobs": [
+      "Paladin",
+      "White Mage",
+      "Dragoon"
+    ]
+  },
+  "Niv'Lu": {
+    "element": "Lightning",
+    "jobs": [
+      "Sniper",
+      "Gunner",
+      "Time Mage"
+    ]
+  },
+  "Oelde Leonis": {
+    "element": "Fire",
+    "jobs": [
+      "Lancer",
+      "Monk",
+      "Samurai"
+    ]
+  },
+  "Oldoa": {
+    "element": "Wind",
+    "jobs": [
+      "Soldier",
+      "Viking",
+      "Assassin"
+    ]
+  },
+  "Orlandeau": {
+    "element": "Lightning",
+    "jobs": [
+      "Sword Saint",
+      "Samurai",
+      "Knight"
+    ]
+  },
+  "Owe": {
+    "element": "Lightning",
+    "jobs": [
+      "Samurai",
+      "Warrior",
+      "Ninja"
+    ]
+  },
+  "Phoebe": {
+    "element": "Light",
+    "jobs": [
+      "Time Mage",
+      "Dragoon",
+      "White Mage"
+    ]
+  },
+  "Rain": {
+    "element": "Fire",
+    "jobs": [
+      "Knight of Grandshelt (Flame)",
+      "Red Mage",
+      "Knight"
+    ]
+  },
+  "Rairyuu": {
+    "element": "Dark",
+    "jobs": [
+      "Gunner",
+      "Thief",
+      "Red Mage"
+    ]
+  },
+  "Rairyuu (Halloween)": {
+    "element": "Earth",
+    "jobs": [
+      "Rune Knight",
+      "Black Mage",
+      "Paladin"
+    ]
+  },
+  "Ramada": {
+    "element": "Water",
+    "jobs": [
+      "Lancer",
+      "Spellblade",
+      "Thief"
+    ]
+  },
+  "Ramada (Winter)": {
+    "element": "Water",
+    "jobs": [
+      "Soldier",
+      "Ninja",
+      "Monk"
+    ]
+  },
+  "Ramza": {
+    "element": "Light",
+    "jobs": [
+      "Squire",
+      "Spellblade",
+      "Ninja"
+    ]
+  },
+  "Raviesse": {
+    "element": "Lightning",
+    "jobs": [
+      "Paladin",
+      "Thief",
+      "Samurai"
+    ]
+  },
+  "Robb Hourne": {
+    "element": "Light",
+    "jobs": [
+      "Samurai",
+      "Lancer",
+      "Soldier"
+    ]
+  },
+  "Rosa": {
+    "element": "Ice",
+    "jobs": [
+      "White Mage of Baron",
+      "White Mage",
+      "Black Mage"
+    ]
+  },
+  "Salire": {
+    "element": "Lightning",
+    "jobs": [
+      "Black Mage",
+      "White Mage",
+      "Ninja"
+    ]
+  },
+  "Schuzelt": {
+    "element": "Lightning",
+    "jobs": [
+      "Soldier",
+      "Knight",
+      "Ranger"
+    ]
+  },
+  "Serjes": {
+    "element": "Ice",
+    "jobs": [
+      "Lancer",
+      "Paladin",
+      "Cleric"
+    ]
+  },
+  "Severo": {
+    "element": "Water",
+    "jobs": [
+      "Black Mage",
+      "Red Mage",
+      "Monk"
+    ]
+  },
+  "Seymore": {
+    "element": "Fire",
+    "jobs": [
+      "Samurai",
+      "Viking",
+      "Thief"
+    ]
+  },
+  "Shadowlynx": {
+    "element": "Dark",
+    "jobs": [
+      "Ninja",
+      "Dragoon",
+      "Samurai"
+    ]
+  },
+  "Skahal": {
+    "element": "Lightning",
+    "jobs": [
+      "Black Mage",
+      "Staff Mage",
+      "Time Mage"
+    ]
+  },
+  "Sosha": {
+    "element": "Wind",
+    "jobs": [
+      "Dragoon",
+      "Warrior",
+      "Ranger"
+    ]
+  },
+  "Sterne (Knight of Ruin)": {
+    "element": "Dark",
+    "jobs": [
+      "Knight of Ruin",
+      "Samurai",
+      "Assassin"
+    ]
+  },
+  "Sterne Leonis": {
+    "element": "Dark",
+    "jobs": [
+      "Soldier",
+      "Dragoon",
+      "Ninja"
+    ]
+  },
+  "Thancred": {
+    "element": "Light",
+    "jobs": [
+      "Gunbreaker",
+      "Dragoon",
+      "Red Mage"
+    ]
+  },
+  "Tyrrell": {
+    "element": "Water",
+    "jobs": [
+      "Knight",
+      "Viking",
+      "Lancer"
+    ]
+  },
+  "Tyytas": {
+    "element": "Dark",
+    "jobs": [
+      "Paladin",
+      "Red Mage",
+      "Viking"
+    ]
+  },
+  "Vadim": {
+    "element": "Lightning",
+    "jobs": [
+      "Thief",
+      "Warrior",
+      "Samurai"
+    ]
+  },
+  "Vallaide": {
+    "element": "Ice",
+    "jobs": [
+      "Green Mage",
+      "White Mage",
+      "Red Mage"
+    ]
+  },
+  "Viktora": {
+    "element": "Ice",
+    "jobs": [
+      "Dragoon",
+      "Soldier",
+      "Thief"
+    ]
+  },
+  "Vinera Fennes": {
+    "element": "Dark",
+    "jobs": [
+      "Assassin",
+      "Thief",
+      "Dual Gunner"
+    ]
+  },
+  "Vistralle": {
+    "element": "Light",
+    "jobs": [
+      "Thief",
+      "Red Mage",
+      "Soldier"
+    ]
+  },
+  "Warrior of Light": {
+    "element": "Light",
+    "jobs": [
+      "Warrior of Light",
+      "Spellblade",
+      "Dragoon"
+    ]
+  },
+  "Xiza": {
+    "element": "Dark",
+    "jobs": [
+      "Monk",
+      "Thief",
+      "Lancer"
+    ]
+  },
+  "Y'shtola": {
+    "element": "Fire",
+    "jobs": [
+      "Sorceress",
+      "White Mage",
+      "Green Mage"
+    ]
+  },
+  "Yerma": {
+    "element": "Wind",
+    "jobs": [
+      "Viking",
+      "Knight",
+      "Thief"
+    ]
+  },
+  "Yuni": {
+    "element": "Water",
+    "jobs": [
+      "Ranger",
+      "Black Mage",
+      "Spellblade"
+    ]
+  },
+  "Zazan": {
+    "element": "Water",
+    "jobs": [
+      "Warrior",
+      "Knight",
+      "Thief"
+    ]
+  }
+}

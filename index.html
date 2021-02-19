@@ -6,73 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="lib/accessible-autocomplete.min.css"/>
+
     <link href="styles.css" rel="stylesheet">
 
-    <title>War of the Visions Farming Story Materials Calculator</title>
+    <title>War of the Visions Quest Farming Materials and Items Calculator</title>
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark fixed-top d-flex flex-row align-items-center px-md-4 flex-nowrap">
-      <h1 class="navbar-brand">WotV Story Mats Calculator</h1>
+      <h1 class="navbar-brand">WotV Farming Calculator</h1>
 
       <button type="button" class="btn btn-primary btn-dark-mode">
-        <img src="img/ui/element_icon_dark.png" class="toggle-dark-mode" alt="Toggle Dark Mode" title="Toggle Dark Mode" data-toggle="tooltip" data-placement="auto">
-        <img src="img/ui/element_icon_shine.png" class="toggle-light-mode" alt="Toggle Light Mode" title="Toggle Light Mode" data-toggle="tooltip" data-placement="auto">
+        <img src="images/UI/ELEMENT_ICON_DARK.PNG" class="toggle-dark-mode" alt="Toggle Dark Mode" title="Toggle Dark Mode" data-toggle="tooltip" data-placement="auto">
+        <img src="images/UI/ELEMENT_ICON_SHINE.PNG" class="toggle-light-mode" alt="Toggle Light Mode" title="Toggle Light Mode" data-toggle="tooltip" data-placement="auto">
       </button>
 
       <a class="bmc-button ml-md-auto" target="_blank" href="https://www.buymeacoffee.com/WotVCalculator">
         <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" class="bmac-cup" alt="Buy me a coffee">
-        <img src="img/othericon_lapis_s.png" class="coffee-visiore-icon" alt="Buy me Visiore">
+        <img src="images/OTHERICON_LAPIS_S.PNG" class="coffee-visiore-icon" alt="Buy me Visiore">
         <span>Buy me <strike>a coffee</strike> Visiore</span>
       </a>
     </nav>
 
-    <nav class="nav nav-main nav-pills nav-fill container mb-4">
-      <a class="nav-item nav-link active nav-search" href="#">Search</a>
-      <a class="nav-item nav-link nav-import" href="#">Import</a>
-      <a class="nav-item nav-link nav-export" href="#">Export</a>
-    </nav>
+    <div class="jumbotron loading">
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <h1 class="display-4">Loading data and crunching numbers.. please wait.</h1>
+    </div>
 
-    <main role="main" class="container">
+    <div class="modal" id="calculatingModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body spinner">
+            Calculating...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main role="main" class="main container">
+      <nav class="nav nav-main nav-pills nav-fill container mb-4">
+        <a class="nav-item nav-link active nav-search" href="#">Search</a>
+        <a class="nav-item nav-link nav-import" href="#">Import</a>
+        <a class="nav-item nav-link nav-export" href="#">Export</a>
+      </nav>
+
       <form>
         <div class="mode mode-autocomplete">
-          <label for="materials">Enter the name of the material, character name,
-            job name, or equipment needed. Character names will load all
-            elemental and job related materials. Job names will load the
-            statues, job memories, and weapon jewels. Equipment names will load
-            the recipe and required crafting materials.</label>
-          <div class="row mb-3">
-            <div class="autocomplete-wrapper col-md-6 col-sm-6 col-6">
-              <select name="materials" id="materials">
-                <option value="">Select a material</option>
-              </select>
-            </div>
-          </div>
 
-          <div class="row mb-5">
-            <div class="col-md-6 col-sm-6 col-6">
-              <button type="button" class="btn btn-primary btn-add">
-                Add Material
-              </button>
-            </div>
-            <div class="col-md-6 col-sm-6 col-6">
-              <button type="button" class="btn btn-danger btn-clear-all">
-                Clear All
-              </button>
+          <div class="row mb-3">
+            <div class="autocomplete-wrapper col-md-12 col-sm-12 col-12">
+              <div class="form-group">
+                <label for="autocomplete">Enter the name of the material, character name,
+                  job name, or equipment needed. Character names will load all elemental
+                  and job related materials. Job names will load the statues, job memories,
+                  and weapon jewels. Equipment names will load the recipe and required
+                  crafting materials.</label>
+                <input id="autocomplete" class="typeahead form-control" type="text" placeholder="Enter the name of the material, job, recipe, equipment, or character">
+              </div>
             </div>
           </div>
 
           <div class="row materials-list mb-5"></div>
+
+          <div class="row mb-5">
+            <div class="col-md-6 col-sm-12 col-12">
+              <button type="button" class="btn btn-danger btn-clear-all">
+                <img src="images/UI/GLOBAL_BTN_CLOSE.PNG" alt="Clear All Selected Materials" class="icon-close"> Clear All Selected Materials
+              </button>
+            </div>
+          </div>
         </div>
 
         <div class="mode mode-import">
           <div class="row">
             <div class="col-md-12">
-              <label for="import" class="">Enter a comma-delimited list of
-                materials. Ex:
-                "Staff Charoite,Wind Alcryst (Blue),Mace Jadeite"</label>
+              <label for="import" class="">
+                Enter a comma-delimited list of materials. Ex: "Staff Charoite,Wind Alcryst (Blue),Mace Jadeite".<br>
+                The field also supports import by item
+                <strong>iname</strong>. Ex: "IT_JB_MM_ALL_2,IT_JB_MM_WAR_4"
+              </label>
             </div>
 
             <div class="col-md-12">
@@ -93,21 +131,22 @@
           </div>
         </div>
 
-
         <div class="mode mode-export">
           <div class="row">
             <div class="col-md-12">
-              <label for="export" class="">The data below has been copied to
-                your clipboard. Paste this into other sites that
-                support this method or save for import later.</label>
+              <label for="export" class="">
+                Copy the data below to your clipboard. Paste this into other sites that support this method or save for import later.
+              </label>
             </div>
 
             <div class="col-md-12">
-              <textarea name="export" id="export" class="mb-3" cols="50"></textarea>
+              <label for="exportName">By item name:</label>
+              <textarea name="exportName" id="exportName" class="mb-3" cols="50"></textarea>
             </div>
 
-            <div class="col-md-6">
-
+            <div class="col-md-12">
+              <label for="export">By item <strong>iname</strong>:</label>
+              <textarea name="export" id="export" class="mb-3" cols="50"></textarea>
             </div>
 
             <div class="col-md-6">
@@ -115,29 +154,118 @@
                 Cancel
               </button>
             </div>
+
+            <div class="col-md-6">
+
+            </div>
           </div>
         </div>
 
       </form>
 
-      <div class="feedback"></div>
+      <div class="row">
+        <div class="col-auto">
+          <button class="btn btn-filter collapsed" type="button" data-toggle="collapse" data-target="#questFilters" aria-expanded="false" aria-controls="questFilters">
+            <img src="images/UI/CMN_BTN_ARROW_01.PNG" alt="Expand/Collapse Arrow" class="accordion-arrow"> Show Quest Filtering Options
+          </button>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-danger btn-filter-clear" type="button">
+            <img src="images/UI/GLOBAL_BTN_CLOSE.PNG" alt="Clear All Filters" class="icon-close"> Clear All Filters
+          </button>
+        </div>
+      </div>
 
-      <div class="story-quest-list table-responsive">
+      <form id="questFiltersForm" class="quest-filters-form">
+        <div id="questFilters" class="collapse quest-filters">
+          <div class="card">
+            <div class="card-header">
+              Hide Quest Types:
+            </div>
+            <div class="card-body quest-type-checkboxes">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="questTypeStory" name="questTypeStory" value="story">
+                <label class="form-check-label" for="questTypeStory">Story</label>
+              </div>
 
-        <table class="table table-striped table-hover table-sm">
-          <thead>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="questTypeEvent" name="questTypeEvent" value="event">
+                <label class="form-check-label" for="questTypeEvent">Event</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="questTypeShard" name="questTypeShard" value="shard">
+                <label class="form-check-label" for="questTypeShard">Shard</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="questTypeCharacter" name="questTypeCharacter" value="character">
+                <label class="form-check-label" for="questTypeCharacter">Character</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="questTypeMultiplayer" name="questTypeMultiplayer" value="multiplayer">
+                <label class="form-check-label" for="questTypeMultiplayer">Multiplayer</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Quest Date Options:
+              <br><small>Note: There is no guarantee dates shown are the correct dates used in game. These options are only for reference. Some quests use dates that can't be consistently parsed and aren't shown here.</small>
+            </div>
+            <div class="card-body quest-date-checkboxes">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="questDateCurrent" name="questDateCurrent" value="current">
+                <label class="form-check-label" for="questDateCurrent">Hide Current Quests</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="questDateExpired" name="questDateExpired" value="expired">
+                <label class="form-check-label" for="questDateExpired">Show Expired Quests</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="questDateUpcoming" name="questDateUpcoming" value="upcoming">
+                <label class="form-check-label" for="questDateUpcoming">Show Upcoming Quests</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Extra Drop Table Options:
+            </div>
+            <div class="card-body quest-extra-checkboxes">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="questStealShow" name="questStealShow" value="show">
+                <label class="form-check-label" for="questStealShow">Show matching stealable items</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="questHostShow" name="questHostShow" value="show">
+                <label class="form-check-label" for="questHostShow">Show matching host reward items</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="quest-filters-info-container"></div>
+
+      <div class="quest-list mt-4">
+        <table class="table table-sm">
+          <thead class="thead-dark">
             <tr>
-              <th scope="col">Story Name</th>
-              <th scope="col">#</th>
-              <th scope="col">Matching</th>
-              <th scope="col">All</th>
+              <th scope="col">Quest Name</th>
+              <th scope="col">Materials (Chance for
+                <strong>at least one</strong> per embark)
+              </th>
             </tr>
           </thead>
-          <tbody>
-
-          </tbody>
+          <tbody></tbody>
         </table>
-
       </div>
 
     </main><!-- /.container -->
@@ -151,59 +279,199 @@
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/WotVFarmCalculator/wotvfarmcalculator.github.io/commits/master" target="_blank">Changelog</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/WotVFarmCalculator/wotvfarmcalculator.github.io#legal" target="_blank">Legal</a>
+          </li>
           <li class="nav-item flex-row d-flex">
             <span class="nav-link">Report an Error:</span>
-            <a class="nav-link" href="https://github.com/WotVFarmCalculator/wotvfarmcalculator.github.io/issues/new" target="_blank">On Github</a>
-            <a class="nav-link" href="https://www.reddit.com/message/compose/?to=BrandonIsABadass&subject=Error%20Report" target="_blank">On Reddit</a>
-          </li>
-          <li class="nav-item">
-            <span class="nav-link latest-update">
-              Latest update: Apr 16: Fixed Chapter 1 Scene 3 Axe Azurite drop.
-            </span>
+            <a class="nav-link" href="https://github.com/WotVFarmCalculator/wotvfarmcalculator.github.io/issues/new" target="_blank">On
+              Github</a>
+            <a class="nav-link" href="https://www.reddit.com/message/compose/?to=BrandonIsABadass&subject=Error%20Report" target="_blank">On
+              Reddit</a>
           </li>
         </ul>
       </div>
     </nav>
 
-
-    <template class="template template-material-item">
-      <div class="input-group col-lg-4 col-md-6 mb-2" data-material="{{material}}">
-        <div class="input-group-prepend">
-      <span class="input-group-text">
-      <img src="img/ui/cmn_btn_close_01.png" alt="Delete Material" title="Delete Material" class="btn btn-close">
-      </span>
-        </div>
-        <div class="form-control">{{materialLabel}}</div>
+    <template class="template template-quest-filters-info">
+      <div class="alert alert-info mt-4" role="alert">
+        {{filteredTypes}}
+        {{#if filteredRequired}}
+        <br>
+        {{filteredRequired}}
+        {{/if}}
+        <br>
+        {{dateTypesShow}} {{dateTypesHide}}
+        {{#if filteredSteal}}
+        <br>
+        {{filteredSteal}}
+        {{/if}}
+        {{#if filteredHost}}
+        <br>
+        {{filteredHost}}
+        {{/if}}
+        <br>
+        Results are sorted by number of matched materials{{sorted}}
       </div>
     </template>
 
-    <template class="template template-material-icon-single">
-      <img src="img/{{image}}" class="material-icon {{typeClass}}" alt="{{material}}" title="{{material}}">
+    <template class="template template-material-typeahead">
+      <div>
+        {{{materialLabel}}}
+      </div>
+    </template>
+
+    <template class="template template-material-item">
+      <div class="input-group col-lg-4 col-md-6 mb-2 material-item-input" data-material="{{material}}">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <img src="images/UI/CMN_BTN_CLOSE_01.PNG" alt="Delete Material" title="Delete Material" class="btn btn-close">
+          </span>
+        </div>
+        <div class="form-control d-flex flex-row align-items-center justify-content-start">{{{materialLabel}}}</div>
+        <div class="input-group-append">
+          <span class="input-group-text">
+            <img src="images/UI/SUMMONQUEST_ICON_RARELITY_OFF.PNG" class="required-material" alt="Set this material as required and the quest list will be sorted and filtered based on this item." title="Set this material as required and the quest list will be sorted and filtered based on this item.">
+          </span>
+        </div>
+      </div>
     </template>
 
     <template class="template template-material-icon-wrapper">
       <div class="material-icon-wrapper">
-        {{layers}}
+        {{{layers}}}
       </div>
       <span>{{includedText}}</span>
     </template>
 
-    <template class="template template-material-table-row">
-      <tr>
-        <td>{{storyName}}</td>
-        <td>{{storyMaterialsLength}}</td>
-        <td>{{storyMaterialIcons}}</td>
+    <template class="template template-material-icon-layer">
+      <img src="images/{{image}}" class="material-icon {{typeClass}}" alt="{{material}}" title="{{material}}">
+    </template>
+
+    <template class="template template-material-quantity-layer">
+      <div class="material-icon material-icon-quantity" title="{{material}}">
+        {{#if showRange}}
+        x{{min}}-{{max}}
+        {{/if}}
+        {{#unless showRange}}
+        x{{min}}
+        {{/unless}}
+      </div>
+    </template>
+
+    <template class="template template-material-steal-layer">
+      <div class="material-icon material-icon-steal" title="Stolen Item">
+        <img src="images/UI/CMN_CURSOR.PNG" alt="Stolen Item">
+        STEAL
+      </div>
+    </template>
+
+    <template class="template template-material-host-layer">
+      <div class="material-icon material-icon-host" title="Multiplayer Host Reward">
+        <img src="images/UI/CMN_ICON_BONUS_HOST.PNG" alt="Multiplayer Host Reward">
+      </div>
+    </template>
+
+    <template class="template template-quest-row">
+      <tr class="quest-row quest-row-type-{{cssclass type}} quest-date-status-{{cssclass dateStatus}}" data-enemies="{{numEnemies}}" data-chests="{{numChests}}" data-nrg="{{nrg}}" data-xp="{{xp}}" data-jp="{{jp}}" data-gold="{{gold}}">
         <td>
-          <img src="img/ui/cmn_btn_detail_03.png" class="btn" data-toggle="tooltip" data-html="true" data-placement="auto" title="{{allMatsLabels}}" alt="Hover to show all items">
+          <div class="container">
+            <div class="row">
+              <img src="images/UI/CMN_BTN_ACORDION_OFF.PNG" data-quest="{{cssclass iname}}" class="accordion-toggle accordion-toggle-quest-name mr-2" alt="Click to expand/collapse" title="Click to expand/collapse">
+              <div class="col">
+                <div class="row">
+                  <span class="quest-type quest-type-{{cssclass type}}">{{type}}</span> {{designation}} {{title}}
+                </div>
+                <div class="row">
+                  <span class="quest-substat">Enemies: {{numEnemies}}</span>
+                  <span class="quest-substat">Chests: {{numChests}}</span>
+                  <span class="quest-substat">NRG: {{nrg}}</span>
+                  <span class="quest-substat">XP: {{xp}}</span>
+                  <span class="quest-substat">JP: {{jp}}</span>
+                  <span class="quest-substat">Gil: {{gold}}</span>
+                </div>
+                {{#if start}}
+                <div class="row">
+                  <span class="quest-substat quest-substat-date">Starts: {{start}}</span>
+                  <span class="quest-substat quest-substat-date">Ends: {{end}}</span>
+                  {{#if isExpired}}
+                  <span class="quest-substat quest-substat-date-type">Expired</span>
+                  {{/if}}
+                  {{#if isUpcoming}}
+                  <span class="quest-substat quest-substat-date-type">Upcoming</span>
+                  {{/if}}
+                </div>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          {{{materialDropBoxes}}}
         </td>
       </tr>
     </template>
 
+    <template class="template template-material-drop-box">
+      <div class="material-icon-drop-box {{dropboxClass}}">
+        {{{materialLabel}}}
+        <div class="material-icon-drop-percent">
+          {{dropChance}}%
+        </div>
+      </div>
+    </template>
+
+    <template class="template template-quest-row-expanded">
+      <tr class="quest-row-expanded quest-row-expanded-{{cssclass iname}} quest-row-expanded-type-{{cssclass type}} gutter-1">
+        <td colspan="3">
+          <div class="container">
+            <div class="row drop-table-header">
+              <img src="images/UI/CMN_BTN_ACORDION_ON.PNG" class="accordion-toggle accordion-toggle-drop-table mr-2">
+              <div class="col">
+                <div class="row">
+                  {{#if isSteal}}
+                  <span class="quest-substat quest-substat-steal">STEAL:</span>
+                  {{/if}}
+                  {{#if isHost}}
+                  <span class="quest-substat quest-substat-host">HOST:</span>
+                  {{/if}}
+                  {{#each enemies}}
+                  <span class="quest-substat">
+                    <img class="enemy-element" src="{{elementImage}}" alt="{{element}}" title="{{element}}">
+                    {{name}}
+                  </span>
+                  {{/each}}
+                </div>
+              </div>
+            </div>
+            <div class="row drop-table-data gutter-2">
+              <div class="col">
+                {{#if isSteal}}
+                <h6>Chance to steal:</h6>
+                {{else if isHost}}
+                <h6>Chance to obtain as multiplayer host reward:</h6>
+                {{else}}
+                <h6>Chance per enemy killed/chest opened:</h6>
+                {{/if}}
+                {{{materialDropBoxes}}}
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </template>
+
+    <template class="template template-no-drop">
+      <div class="no-drop">
+        NO<br>DROP
+      </div>
+    </template>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="lib/accessible-autocomplete.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="lib/typeahead.bundle.min.js"></script>
 
     <script src="scripts.js"></script>
   </body>
